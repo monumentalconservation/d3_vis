@@ -1,0 +1,104 @@
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+:root {
+  --background-main: #edf4f7;
+  --background-side: #f4f8fa;
+  --primary-blue: #32444d;
+  --secondary-blue: #b3c3cc;
+  --primary-orange: #ff6719;
+  --secondary-orange: #ffaa80;
+}
+
+body {
+	/* font-family: Inter var; */
+	font-size: 16px;
+	line-height: 1.5;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+
+	background-color: var(--background-main);
+	color: var(--primary-blue);
+}
+
+nav {
+  background-color: var(--background-side);
+  padding: 48px;
+}
+
+main {
+  padding: 48px;
+}
+
+
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h2 {
+  color: var(--secondary-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 24px 0 0 10px;
+}
+
+p {
+  font-size: 24px;
+  margin: 0;
+}
+
+rect {
+  fill: var(--primary-orange);
+  /* transition: fill 0.5s; */
+}
+
+rect.transparent {
+  opacity: 0;
+}
+
+svg.daily text {
+  fill: var(--secondary-orange);
+  text-anchor: middle;
+  font-size: 14px;
+}
+
+text.steps {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+g:hover text.steps {
+  opacity: 1;
+}
+
+
+circle.actual {
+  /* stroke: var(--primary-blue);
+  stroke-width: 5px; */
+  fill: var(--primary-blue);;
+}
+
+circle.ring {
+  fill: none;
+  stroke: var(--secondary-blue);
+  stroke-width: 2px;
+  opacity: 0.25
+}
+
+text.days {
+  transition: opactiy 2.5s;
+}
+
+g:hover text.days {
+  opacity: 0;
+}
+
+svg.monthly text {
+  /* color: var(--primary-blue); */
+  color: pink !important;
+}
